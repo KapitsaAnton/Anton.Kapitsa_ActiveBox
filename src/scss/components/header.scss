@@ -1,0 +1,312 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+
+// .header{
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-between;
+//    position: relative;
+
+//    &::after{
+//       position: absolute;
+//       content: "";
+//       bottom: 0;
+//       right: 0;
+//       width: 100%;
+//       border-top: 1px solid $line-main;
+//    }
+
+//    &__nav{
+//       display: flex;
+//       width: 100%;
+//       justify-content: space-between;
+//       align-items: center;
+//       position: relative;
+      
+//       &-logo{
+//          padding: 0;
+
+//          @media (max-width: 768px){
+//             padding: 21px 0 20px 0;
+//          }
+
+//          &-img{
+//             height: auto;
+//             height: 25.5px;
+//             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+         
+//             @media (max-width: 768px){
+//                height: 14px;
+//                filter: none;
+//             }
+//          }      
+//       }
+
+//       &-burger{
+//          display: none;
+//          height: 3px;
+//          width: 24px;
+//          background-color: $white;
+//          position: relative;
+//          cursor: pointer;
+//          margin: 0 10.5px 0 0;
+      
+//          &::before{
+//             content: "";
+//             position: absolute;
+//             width: 100%;
+//             height: 3px;
+//             top: 7.5px;
+//             right: 0;
+//             background-color: $white;
+//          }
+   
+//          &::after{
+//             content: "";
+//             position: absolute;
+//             width: 100%;
+//             height: 3px;
+//             bottom: 7.5px;
+//             right: 0;
+//             background-color: $white;
+//          }
+      
+//          @media (max-width: 768px){
+//             display: block;
+//          }
+//       }
+
+//       &-list{
+//          transition: 0.3s;
+//          display: flex;
+
+//          @media (max-width: 768px){
+//             display: none;
+//          }
+
+//          &-item {
+//             width: 134px;
+//             padding: 42.5px 0;
+//             display: flex;
+//             justify-content: center;
+//             position: relative;
+
+//             @media (max-width: 1200px){
+//                width: 112px;
+//                padding: 43px 0;
+//                font-size: $txt-12;
+//                line-height: $txt-12-line;
+//             }
+
+//             @media (max-width: 768px){
+//                padding: 24px 0;
+//                justify-content: flex-start;
+//             }
+
+//             a{
+//                @include nav-main();
+//                font-size: $txt-13;
+//                line-height: $txt-13-line;
+
+//                @media (max-width: 1200px){
+//                   font-size: $txt-12;
+//                   line-height: $txt-12-line;
+//                }
+
+//                &::after{
+//                   position: absolute;
+//                   content: "";
+//                   bottom: 0;
+//                   left: 0;
+//                   width: 100%;
+//                   border-top: 0px solid $line-main;
+//                   transition: 0.3s;
+//                }
+
+//                &:hover::after{
+//                   position: absolute;
+//                   content: "";
+//                   bottom: 0;
+//                   left: 0;
+//                   width: 100%;
+//                   border-top: 3px solid $line-main;
+
+//                   @media (max-width: 768px){
+//                      bottom: 15px;
+//                   }
+//                }
+//             }
+//          }
+//       }
+//    }
+// }
+
+#header__checkbox{
+   display: none;
+
+   @media (max-width: 768px){ 
+
+      &:checked ~ .header__nav{
+         display: block;
+      }
+
+      &:checked ~ .bannerbox{
+         display: none;
+      }
+   }
+
+}
+
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   flex-wrap: wrap;
+
+   &__logo{
+      order: -1;
+      width: 176px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1200px){}
+
+      @media (max-width: 768px){
+         height: 56px;
+      }
+
+      &-img{
+         height: 25.5px;
+      
+         @media (max-width: 768px){
+            height: 14px;
+            filter: none;
+         }
+      } 
+   }
+
+   &__label{
+      order: -1;
+      display: none;
+      cursor: pointer;
+      margin: 0 15.5px 0 0;
+
+      @media (max-width: 768px){ 
+         display: block;
+      }
+
+      &-line{
+         width: 24px;
+         height: 3px;
+         background-color: $white;
+         margin-bottom: 4.5px;
+
+         &:nth-child(2){
+            margin-bottom: 0px;
+            height: 1.5px;
+         }
+
+         &:nth-child(3){
+            height: 1.5px;
+         }
+
+         &:nth-child(4){
+            margin-bottom: 0px;
+         }
+      }
+   }
+
+   &__nav{
+      display: flex;
+      align-items: center;
+      width: auto;
+      order: -1;
+      height: 100%;
+
+      @media (max-width: 768px){ 
+         border-top: 1px solid $line-main;
+         display: none;
+         width: 100%;
+      }
+
+      &-list{
+         display: flex;
+         align-items: center;
+
+         @media (max-width: 768px){ 
+            padding: 28px 0 170px 0;
+            display: block;
+         }
+
+         &-item{
+            width: 134px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 42.5px 0;
+
+            @media (max-width: 1200px){ 
+               width: 112px;
+            }
+
+            @media (max-width: 800px){ 
+               width: 105px;
+            }
+
+            @media (max-width: 768px){ 
+               justify-content: start;
+               padding: 24px 0;
+               margin: 0;
+            }
+
+            & a{
+
+               @include nav-main();
+               font-size: $txt-13;
+               line-height: $txt-13-line;
+
+               @media (max-width: 1200px){
+                  font-size: $txt-12;
+                  line-height: $txt-12-line;
+               }
+
+               @media (max-width: 768px){
+                  font-size: $txt-13;
+                  line-height: $txt-13-line;
+               }
+
+               &::after{
+                  position: absolute;
+                  content: "";
+                  bottom: -43px;
+                  left: 0;
+                  width: 100%;
+                  border-top: 0px solid $line-main;
+                  transition: 0.3s all ease-in-out;
+
+                  @media (max-width: 768px){
+                     bottom: 12px;
+                  }
+               }
+
+               &:hover::after{
+                  position: absolute;
+                  content: "";
+                  bottom: -43px;
+                  left: 0;
+                  width: 100%;
+                  border-top: 3px solid $line-main;
+
+                  @media (max-width: 768px){
+                     bottom: 15px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+

@@ -1,0 +1,189 @@
+@import 'fonts';
+
+// For text:
+
+@mixin txt-big() {
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: $txt-big;
+   line-height: $txt-big-line;
+   text-align: center;
+   color: $txt-main-col;
+}
+
+@mixin txt-basic() {
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: $txt-main;
+   line-height: $txt-main-line;
+   text-align: center;
+   color: $txt-main-col;
+}
+
+@mixin txt-smaller() {
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: $txt-small;
+   line-height: $txt-small-line;
+   text-align: center;
+   color: $txt-main-col;
+}
+
+// For titles:
+
+@mixin title-basic() {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 900;
+   font-size: $txt-big;
+   line-height: $txt-big-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $txt-black;
+}
+
+@mixin title-smaller() {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 900;
+   font-size: $txt-main;
+   line-height: $txt-main-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $txt-black;
+}
+
+@mixin title-name() {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: $txt-big;
+   line-height: $txt-big-line;
+   text-transform: capitalize;
+   color: $txt-black;
+}
+
+@mixin title-name-small() {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: $txt-main;
+   line-height: $txt-main-line;
+   text-transform: capitalize;
+   color: $txt-black;
+}
+
+// For nav
+
+@mixin nav-main {
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: $txt-13;
+line-height: $txt-13-line;
+text-align: center;
+text-transform: uppercase;
+color: $white;
+}
+
+@mixin nav-smaller {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: $txt-12;
+   line-height: $txt-12-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $white;
+   }
+
+// For H1:
+
+@mixin h1-desk {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 900;
+   font-size: $h1-desk;
+   line-height: $h1-desk-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $white;
+}
+
+@mixin h1-tab {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 900;
+   font-size: $h1-tab;
+   line-height: $h1-tab-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $white;
+}
+
+@mixin h1-mob {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 900;
+   font-size: $h1-mob;
+   line-height: $h1-mob-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $white;
+}
+
+// For download menu
+
+@mixin download-title {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 30px;
+   line-height: 35px;
+   text-align: center;
+   color: $black;
+}
+
+@mixin download-text {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: $txt-main;
+   line-height: $txt-main-line;
+   text-align: center;
+   text-transform: uppercase;
+   color: $black;
+}
+
+@mixin banner-main-mix {
+   font-family: 'Cardo';
+   font-style: italic;
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 49px;
+   text-transform: capitalize;
+   color: $white;
+}
+
+@mixin banner-main-mix-tab {
+   font-family: 'Cardo';
+   font-style: italic;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 32px;
+   text-transform: capitalize;
+   color: $white;
+}
+
+@mixin banner-small-mix {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: $txt-13;
+   line-height: $txt-13-line;
+   text-transform: uppercase;
+   color: $white;
+}

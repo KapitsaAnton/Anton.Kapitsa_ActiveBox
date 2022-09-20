@@ -1,0 +1,26 @@
+@import 'node_modules/swiper/swiper';
+
+@import 'nullstyle';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'rem-breakepoints';
+
+@import url('components/wrapper.scss');
+@import url('components/button-download.scss');
+@import url('components/card.scss');
+@import url('components/member.scss');
+@import url('components/card-wrapper.scss');
+@import url('components/burger.scss');
+
+@import url('components/banner.scss');
+@import url('components/header.scss');
+@import url('components/bannerbox.scss');
+@import url('components/section-features.scss');
+@import url('components/section-work.scss');
+@import url('components/section-team.scss');
+@import url('components/slider-swipers.scss');
+@import url('components/section-testimonials.scss');
+@import url('components/section-download.scss');
+@import url('components/footer.scss');
+

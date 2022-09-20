@@ -1,0 +1,89 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+
+.swiper {
+   width: 100%;
+}
+
+.swiper-wrapper{
+   max-height: 540px;
+   height: 540px;
+
+   @media (max-width: 1200px){
+      height: 370.5px;
+   }
+
+   @media (max-width: 768px){
+      height: 576px;
+   }
+}
+
+.swiper-slide {
+   cursor: grab;
+   display: flex;
+   height: 490px;
+   background-color: $bg-small-banner;
+
+   @media (max-width: 1200px){
+      height: 332px;
+   }
+
+   @media (max-width: 768px){
+      flex-direction: column;
+      height: 468px;
+      background-color: none;
+   }
+
+   @media (max-width: 700px){
+      height: 500px;
+   }
+
+   @media (max-width: 500px){
+      height: 538px;
+   }
+}
+
+.swiper-slide-active{
+   background-color: none;
+   margin-right: 0;
+}
+
+.swiper-pagination{
+   margin: 0 auto;
+   max-width: 170px;
+	position: absolute;
+	left: 0;
+   bottom: -45px;
+	right: 0;
+   display: flex;
+   justify-content: space-between;
+   z-index: 1;
+   
+   @media (max-width: 1200px){
+      max-width: 149.5px;
+      bottom: -31.5px;
+   }
+
+   @media (max-width: 738px){
+      max-width: 129.5px;
+   }
+}
+.swiper-pagination-bullet {
+   cursor: pointer;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+   opacity: 1;
+   border: 1px solid $bg-small-banner;
+   background-color: rgba(1, 1, 1, 0);
+
+   @media (max-width: 1200px){
+      width: 9.5px;
+      height: 9.5px;
+   }
+}
+.swiper-pagination-bullet-active {
+   border: 1px solid $bg-small-banner;
+   background-color: $bg-small-banner;
+}

@@ -1,0 +1,61 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+@import 'button-download';
+
+.download{
+   padding: 159px 0 114px 0;
+
+   @media (max-width: 1200px){
+      padding: 110px 0 78px 0;
+   }
+
+   @media (max-width: 768px){
+      padding: 32.5 0 45px 0;
+   }
+
+   &__title{
+      @include download-title;
+      margin: 17.5px 0;
+
+      @media (max-width: 1200px){
+         font-size: 24px;
+         line-height: 28px;
+         margin: 16px 0;
+      }
+
+      @media (max-width: 768px){
+         font-size: 18px;
+         line-height: 21px;
+         margin: 34px 0 29.5px 0;
+      }
+   }
+
+   &__text{
+      @include download-text;
+      margin: 5px 0 48px 0;
+
+      @media (max-width: 1200px){
+         font-size: 14px;
+         line-height: 16px;
+         margin: 5px 0 43px 0;
+      }
+
+      @media (max-width: 768px){
+         font-size: 13px;
+         line-height: 15px;
+         margin: 3px 0 11px 0;
+      }
+   }
+
+   &__button{
+      @include title-basic;
+      @include button-desk;
+      @include button-alt;
+
+      @media (max-width: 1200px){
+         @include title-smaller();
+         color: $white;
+      }
+   }
+}

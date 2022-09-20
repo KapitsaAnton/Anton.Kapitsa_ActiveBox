@@ -1,0 +1,93 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+
+.testimonials{
+   position: relative;
+
+   &__img-wrap{
+      height: 490px;
+      width: 50%;
+      overflow: hidden;
+      
+      @media (max-width: 1200px){
+         height: 332px;
+      }
+
+      @media (max-width: 768px){
+         width: 100%;
+         height: 212px;
+      }
+
+      img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   &__text{
+      width: 50%;
+      padding: 0 0 0 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      @media (max-width: 1200px){
+         display: inline;
+         padding: 47px 0 0 88px;
+      }
+
+      @media (max-width: 900px){
+         padding: 47px 0 0 58px;
+      }
+
+      @media (max-width: 768px){
+         width: 100%;
+         text-align: center;
+         padding: 0 20px 0 20px;
+         height: 224px;
+      }
+
+      @media (max-width: 700px){
+         height: 256px;
+      }
+
+      @media (max-width: 600px){
+         height: 288px;
+      }
+
+      @media (max-width: 500px){
+         height: 326px;
+      }
+
+      &-main{
+         @include banner-main-mix;
+         padding: 17px 0;
+         max-width: 470px;
+
+         @media (max-width: 1200px){
+            @include banner-main-mix-tab;
+            max-width: 330px;
+            padding: 14px 0;
+         }
+
+         @media (max-width: 768px){
+            max-width: none;
+            padding: 23px 0;
+         }
+      }
+
+      &-small{
+         @include banner-small-mix;
+         padding: 6.5px 0;
+      
+         @media (max-width: 1200px){
+            font-size: $txt-12;
+            line-height: $txt-12-line;
+            padding: 2.5px 0;
+         }
+      }
+   }
+}

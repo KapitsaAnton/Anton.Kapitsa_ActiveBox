@@ -1,0 +1,66 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+@import 'button-download';
+
+.bannerbox{
+   width: 100%;
+   padding: 130px 0 120px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-top: 1px solid $line-main;
+   transition: 0.4s;
+
+   @media (max-width: 1200px){
+      padding: 157px 0 126px 0;
+   }
+
+   @media (max-width: 768px){
+      padding: 50px 0 52px 0;
+   }
+
+   &__title{
+      @include h1-desk();
+      max-width: 1034px;
+      padding-bottom: 31.5px;
+
+      @media (max-width: 1200px){
+         @include h1-tab();
+         max-width: 775px;
+         padding-bottom: 61.5px;
+      }
+
+      @media (max-width: 768px){
+         @include h1-mob();
+         padding-bottom: 33px;
+         max-width: 500px;
+      }
+   }
+
+   &__text{
+      @include txt-big();
+      color: $white;
+      max-width: 1034px;
+      padding-bottom: 79.5px;
+
+      @media (max-width: 1200px){
+         @include txt-basic();
+         color: $white;
+         max-width: 775px;
+         padding-bottom: 89px;
+      }
+
+      @media (max-width: 768px){
+         @include txt-smaller();
+         color: $white;
+         padding-bottom: 49px;
+         max-width: 500px;
+      }
+   }
+
+   &__button{
+      @include title-basic();
+      @include button-desk();
+   }
+}

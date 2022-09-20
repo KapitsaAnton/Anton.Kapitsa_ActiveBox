@@ -1,0 +1,42 @@
+@import '../variables';
+@import '../mixins.scss';
+@import '../fonts';
+
+@mixin button-desk {
+   display: inline-block;
+   cursor: pointer;
+   min-width: 370px;
+   background-color: $primary;
+   color: $white;
+   text-align: center;
+   padding: 26px 0;
+   transition: 0.3s;
+
+   @media (max-width: 1200px){
+      min-width: 314px;
+   }
+
+   @media (max-width: 768px){
+      min-width: 280px;
+      padding: 16px 0;
+   }
+
+   &:hover{
+      background-color: $secondary;
+   }
+   
+   &:active{
+      background-color: $primary;
+      box-shadow: 4px 4px 30px #FF4343;
+   }
+}
+
+@mixin button-alt {
+   @media (max-width: 1200px){
+      padding: 29.5px 0;
+   }
+
+   @media (max-width: 768px){
+      min-width: 280px;
+   }
+}
